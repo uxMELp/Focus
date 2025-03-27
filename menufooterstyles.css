@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #BF00FF;
+    --secondary-color: #00ffff;
+    --bg-dark: #0D0D0D;
+    --bg-gradient: linear-gradient(180deg, #0a0a0a, #BF00FF);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 1rem = 16px (base estándar) */
+}
+
+body {
+    background: linear-gradient(180deg, #0D0D0D 80%, #2c003a 0%);
+    background-size: cover;
+    margin: 0;
+    color: #fff;
+    font-family: 'Anonymous Pro', sans-serif;
+    text-align: center;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    
+}
+
+.todoelmenu{ 
+    background: #0a0a0a;
+    margin: 0;
+    border-bottom: 1px solid #BF00FF;
+    box-shadow: 0px 0px 20px #BF00FF;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 59%; /* Ajustado para que se adapte mejor a diferentes tamaños de pantalla */
+}
+
+.nav-links {
+    display: flex;
+    gap: 0rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem; /* Usando rem para que sea relativo */
+    transition: 0.3s;
+}
+
+
+
+nav a {
+    color: #BF00FF;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0px 0px 10px#BF00FF;
+    background-color: #0a0a0a;
+    padding: 1rem; /* Usando rem para mayor flexibilidad */
+    border-bottom: 1px solid #BF00FF;
+    box-shadow: 0px 0px 4px #BF00FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav a:hover{
+    color: #EAEAEA;
+    text-shadow: 0px 0px 10px#EAEAEA;
+    background-color: #FF0099;
+}
+
+.brand-name {
+    font-family: 'Sacramento', cursive;
+    font-size: 2rem;
+    color: #BF00FF;
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+    display: inline-block; /* Se mantiene en una línea y respeta el tamaño del contenido */
+    text-shadow: 0px 0px 1px #BF00FF;
+    background-color: #0a0a0a;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #BF00FF;
+    box-shadow: 0px 0px 4px #BF00FF;
+    text-align: center;
+}
+
+.logoinicio {
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #00FFFF; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado */
+    font-family: 'Montserrat', sans-serif;
+    background: none; /* Elimina cualquier fondo */
+    border: none; /* Quita los bordes */
+    padding: 0; /* Elimina el padding */
+    box-shadow: none; /* Quita cualquier sombra */
+    display: inline; /* Evita que se comporte como un bloque */
+}
+
+.brand-name:hover{ 
+    color: #EAEAEA;
+    text-shadow: 0px 0px 10px#EAEAEA;
+    background-color: #FF0099;
+}
+
+/* FOOTER */
+.footerfalso {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Usando rem para flexibilidad */
+    padding: 1.25rem;
+}
+
+.icon {
+    width: 3.125rem; /* 50px a rem */
+    height: 3.125rem; /* 50px a rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #BF00FF;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.icon img {
+    width: 1.875rem; /* 30px a rem */
+    height: 1.875rem; /* 30px a rem */
+}
+
+.icon:hover {
+    background-color: #BF00FF;
+    transform: scale(1.1);
+}
+
+.footerfalso a {
+    text-decoration: none;
+    display: inline-block;
+    width: 3.125rem; /* 50px a rem */
+    height: 3.125rem; /* 50px a rem */
+    background-color: #0D0D0D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footerfalso a:active {
+    transform: scale(0.98);
+}
+
+.footerfalso a:hover {
+    background-color: #BF00FF;
+    fill: #EAEAEA;
+}
+
+.footerfalso a svg {
+    width: 1.5rem; /* 24px a rem */
+    height: 1.5rem; /* 24px a rem */
+    fill: #EAEAEA;
+}
+
+.footerfalso a {  
+    border-bottom: 2px solid #BF00FF;
+}
+
+footer {
+    padding: 2rem;
+    background: none;
+    margin-top:4rem;
+    
+     
+}
+
+.logoinicio{
+    font-size: 2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #00FFFF; /* Color del texto */
+    text-decoration: none; /* Quitar subrayado */
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+
+    nav{
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+    .nav-links {
+        font-size: 1.9rem; /* Ajustar tamaño en pantallas más pequeñas */
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+
+    .brand-name {
+        font-size: 2rem; /* Ajustar tamaño en pantallas más pequeñas */
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+    .todoelmenu {
+        flex-direction: column; /* Poner el menú en columna en pantallas pequeñas */
+        gap: 2rem;
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+    .footerfalso {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        font-size: 1.1rem; /* Ajuste para pantallas muy pequeñas */
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+    .brand-name {
+        font-size: 1.2rem; /* Ajuste para pantallas muy pequeñas */
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+    .todoelmenu {
+        gap: 1rem;
+        justify-content: center; /* Centra los elementos dentro */
+
+    }
+
+
+    .icon {
+        width: 2.5rem; /* Ajuste de tamaño para pantallas pequeñas */
+        height: 2.5rem;
+    }
+
+    .footerfalso {
+        gap: 0.75rem;
+    }
+}

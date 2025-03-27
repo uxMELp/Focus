@@ -1,0 +1,115 @@
+/* Estilo general */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0D0D0D;
+    color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+}
+
+.botones{
+    display: flex;
+    flex-direction: column; /* Apila los botones verticalmente */
+    align-items: center; /* Centra los botones horizontalmente */
+    gap: 10px; /* Espacio entre botones */
+    width: 100%; /* Asegura que ocupen el ancho completo del contenedor */
+}
+
+.mensaje {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.titulo {
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    color: #FF0099;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #EAEAEA;
+    margin-bottom: 40px;
+}
+
+.botonformulario {
+    background-color: #00FFFF;
+    color: #0D0D0D;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.botonformulario:hover {
+    background-color: #FF0099;
+    color: #FFFFFF;
+}
+
+/* Estilos de iconos y footer */
+.footerfalso {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footerfalso a {
+    margin: 0 10px;
+    color: #EAEAEA;
+    transition: color 0.3s ease;
+}
+
+.footerfalso a:hover {
+    color: #FF0099;
+}
+
+/* Estilo del footer */
+footer {
+    background-color: #444444;
+    color: #EAEAEA;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividad */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+
+    .mensaje {
+        margin-top: 50px;
+    }
+
+    .titulo {
+        font-size: 1.8em;
+    }
+
+    .descripcion {
+        font-size: 1em;
+    }
+
+    .botonformulario {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}

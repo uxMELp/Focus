@@ -1,0 +1,173 @@
+/* Menú central */
+html, body {
+    overflow: hidden; /* Oculta el scroll completamente */
+}
+main {
+    height: 100%;
+    margin: 10%;
+    gap: 10%;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    gap: 20px;
+    width: 100%;
+    min-height: 100vh; /* Asegura que ocupa toda la altura de la pantalla */
+    padding: 10px;
+}
+
+
+.galeria {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra el contenido en la pantalla */
+    gap: 10px; /* Espacio entre cajas */
+    width: 100%; /* Para que no se desborde */
+    padding: 10px;
+
+}
+
+/* Cajas */
+.item {
+    display: flex;
+    flex-direction: column;
+    border: 0.15rem solid #00FFFF; /* Borde celeste */
+    color: #EAEAEA; /* Color blanco-gris para el texto */
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #0D0D0D;
+    padding: 30px;
+    width: 95%; /* Reduce el ancho de las cajas en pantallas grandes */
+    max-width: 500px; /* Máximo ancho para evitar que sea demasiado grande */
+    text-align: center;
+    
+}
+
+/* Título de los elementos */
+.item h3 {
+    font-family: 'VT323', monospace;
+    color: #FF0099; /* Título en rosa */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Lista de elementos */
+.item ul {
+    position: absolute;
+    top: 100%; /* Aparece debajo del item */
+    left: 0;
+    width: 100%;
+    padding: 50px 0px 0px 0px ;
+    text-align: left;
+}
+
+
+.item ul li {
+    color: #EAEAEA;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Botón de precio */
+.item .botonprecio {
+    display: block;
+    padding: 10px 0px;
+    background-color: #0D0D0D;
+    color: #00FFFF;
+    font-family: 'Anonymous Pro', monospace;
+    font-weight: bold;
+    border: 0.15rem solid #00FFFF;
+    border-radius: 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px #00FFFF;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+/* Efecto hover */
+.item:hover {
+    box-shadow: 0 0 10px #00FFFF;
+    transform: scale(1.05);
+}
+
+/* Muestra la lista al hacer hover */
+.item:hover ul {
+    display: block;
+}
+
+/* Efecto hover sobre el botón */
+.item:hover .botonprecio {
+    background-color: #00FFFF;
+    color: #FF0099;
+    box-shadow: 0 0 15px #00FFFF;
+}
+
+@media (max-width: 480px) {
+    html, body {
+        overflow-x: hidden; /* Evita el scroll horizontal */
+        overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
+        width: 100vw; /* Evita desbordamiento */
+    }
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .galeria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 30px;
+        padding: 30px 0;
+        margin-top: 100px; /* Agrega espacio entre el menú y las cajas */
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 85%;  /* Se ajusta para que no sea demasiado ancho */
+        max-width: 320px; /* Un poco más pequeño para un diseño más limpio */
+        padding: 15px; /* Más espacio dentro de la caja */
+        text-align: center;
+        margin: 0 auto 20px auto; /* Separa más las cajas */
+        box-sizing: border-box; /* Asegura que padding no aumente el tamaño total */
+    }
+
+    .item ul {
+        position: relative;
+        width: 100%;
+        padding: 0;
+    }
+
+    .item .botonprecio {
+        margin-top: 25px; /* Más espacio con la descripción */
+        padding: 12px 0; /* Aumenta el padding para hacerlo más cómodo */
+        width: 95%; /* Evita que ocupe todo el ancho */
+    }
+
+    
+}
+
